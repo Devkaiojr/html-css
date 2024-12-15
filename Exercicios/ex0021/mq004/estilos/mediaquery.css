@@ -1,0 +1,107 @@
+@charset "UTF-8";
+
+/* Todas as midias*/
+/* Typical Device Breakpoints 
+Pequenas telas:ate 600px
+Celular: do 600px~768
+Tablet: do 769~992
+Desktop: do 992~1200px
+Grandes Telas: + de 1200px*/
+
+@media print {
+    body {
+        background-image: url(../imagens/back-print.jpg);
+    }
+    main {
+        border: 2px solida black;
+    }
+    main h1 {
+        text-shadow: none;
+        color: black;
+    }
+    main::after {
+        content: "Essa impressao foi fieta atraves do site www.cursoemvideo.com";
+        text-decoration: overline;
+    }
+    img#phone {
+        display: none;
+      }
+      img#tablet {
+        display: none;
+      }
+      img#print {
+        display: block;
+      }
+      img#pc {
+        display: none;
+      }
+      img#tv {
+        display: none;
+      }
+}
+
+@media screen and (min-width: 768px) and (max-width: 992px)  {
+    body {
+        background-image: url(../imagens/back-tablet.jpg);
+    }
+    img#phone {
+        display: none;
+      }
+      img#tablet {
+        display: block;
+      }
+      img#print {
+        display: none;
+      }
+      img#pc {
+        display: none;
+      }
+      img#tv {
+        display: none;
+      }
+}
+
+@media screen and (min-width: 992px) and (max-width: 1200px) {
+    body {
+        background-image: url(../imagens/back-pc.jpg);
+    }
+    img#phone {
+        display: none;
+      }
+      img#tablet {
+        display: none;
+      }
+      img#print {
+        display: none;
+      }
+      img#pc {
+        display: block;
+      }
+      img#tv {
+        display: none;
+      }
+}
+@media screen and (min-width: 1200px) {
+    body {
+        background-image: url(../imagens/back-tv.jpg)
+    }
+    main {
+        width: 700px;
+    }
+    img#phone {
+        display: none;
+      }
+      img#tablet {
+        display: none;
+      }
+      img#print {
+        display: none;
+      }
+      img#pc {
+        display: none;
+      }
+      img#tv {
+        display: block;
+      }
+}
+
